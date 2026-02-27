@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>5A Engineering | ВОЛС в Казахстане</title>
+    <link href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <!-- NAVIGATION -->
+    <nav id="navbar">
+        <a href="#home" class="nav-logo">
+            <img src="logo_5a_lg.png" alt="5A Engineering" class="nav-logo-img">
+            <span class="nav-logo-text">5A <span>Engineering</span></span>
+        </a>
+        <ul class="nav-links">
+            <li><a href="#about"     data-key="nav_about">О компании</a></li>
+            <li><a href="#services"  data-key="nav_services">Услуги</a></li>
+            <li><a href="#gallery"   data-key="nav_gallery">Проекты</a></li>
+            <li><a href="#vacancies" data-key="nav_vacancies">Вакансии</a></li>
+            <li><a href="#contacts"  data-key="nav_contacts">Контакты</a></li>
+            <li>
+                <div class="lang-switch">
+                    <span class="lang-btn" id="btn-ru" onclick="changeLang('ru')">RU</span>
+                    <span class="lang-sep">|</span>
+                    <span class="lang-btn" id="btn-kz" onclick="changeLang('kz')">KZ</span>
+                    <span class="lang-sep">|</span>
+                    <span class="lang-btn" id="btn-en" onclick="changeLang('en')">EN</span>
+                </div>
+            </li>
+        </ul>
+        <div class="hamburger" id="hamburger" onclick="toggleMenu()">
+            <span></span><span></span><span></span>
+        </div>
+    </nav>
+
+    <div class="mobile-nav" id="mobileNav">
+        <a href="#about"     onclick="closeMenu()" data-key="nav_about">О компании</a>
+        <a href="#services"  onclick="closeMenu()" data-key="nav_services">Услуги</a>
+        <a href="#gallery"   onclick="closeMenu()" data-key="nav_gallery">Проекты</a>
+        <a href="#vacancies" onclick="closeMenu()" data-key="nav_vacancies">Вакансии</a>
+        <a href="#contacts"  onclick="closeMenu()" data-key="nav_contacts">Контакты</a>
+        <div class="lang-switch" style="margin-top:10px;width:fit-content">
+            <span class="lang-btn" onclick="changeLang('ru')">RU</span>
+            <span class="lang-sep">|</span>
+            <span class="lang-btn" onclick="changeLang('kz')">KZ</span>
+            <span class="lang-sep">|</span>
+            <span class="lang-btn" onclick="changeLang('en')">EN</span>
+        </div>
+    </div>
+
+    <!-- HERO -->
+    <section class="hero" id="home">
+        <div class="hero-grid"></div>
+        <div class="orb orb-1"></div>
+        <div class="orb orb-2"></div>
+        <div class="orb orb-3"></div>
+
+        <div class="hero-content">
+            <div class="hero-badge" data-key="hero_badge">ТОО «5A Engineering» · Казахстан</div>
+            <h1>
+                <span data-key="hero_title_1">Надёжные сети.</span><br>
+                <span class="accent" data-key="hero_title_2">Современные технологии.</span>
+            </h1>
+            <p class="hero-sub" data-key="hero_desc">Строительство и развитие волоконно-оптических линий связи по всему Казахстану. Проекты любой сложности для коммерческих и промышленных объектов.</p>
+            <div class="hero-cta">
+                <a href="#services" class="btn-primary">
+                    <i class="fas fa-layer-group"></i>
+                    <span data-key="hero_cta1">Наши услуги</span>
+                </a>
+                <a href="#contacts" class="btn-ghost">
+                    <i class="fas fa-paper-plane"></i>
+                    <span data-key="hero_cta2">Связаться с нами</span>
+                </a>
+            </div>
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <div class="stat-num">360°</div>
+                    <div class="stat-label" data-key="stat_2">Полный цикл работ</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-num">KZ</div>
+                    <div class="stat-label" data-key="stat_3">Национальный масштаб</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-num">4+</div>
+                    <div class="stat-label" data-key="stat_4">Открытые вакансии</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <!-- ABOUT -->
+    <section id="about">
+        <div class="about-grid">
+            <div class="about-text reveal">
+                <div class="section-label" data-key="about_label">О компании</div>
+                <h3>
+                    <span data-key="about_h1">Инженерное </span><span class="accent-text" data-key="about_h2">совершенство</span><span data-key="about_h3"> в каждом проекте</span>
+                </h3>
+                <p data-key="about_p1">Мы — инженерно-строительная компания. Специализируемся на проектировании, строительстве и вводе в эксплуатацию волоконно-оптических линий связи (ВОЛС).</p>
+                <p data-key="about_p2">Выполняем полный цикл работ под ключ — от планирования и проектирования до пуско-наладочных работ и сдачи объекта заказчику. Работаем по всей территории Республики Казахстан.</p>
+                <div class="about-features">
+                    <div class="feat-item">
+                        <div class="feat-icon"><i class="fas fa-check"></i></div>
+                        <div class="feat-text">
+                            <strong data-key="feat_1_title">Под ключ</strong>
+                            <span data-key="feat_1_sub">Полный цикл</span>
+                        </div>
+                    </div>
+                    <div class="feat-item">
+                        <div class="feat-icon"><i class="fas fa-map"></i></div>
+                        <div class="feat-text">
+                            <strong data-key="feat_2_title">Весь Казахстан</strong>
+                            <span data-key="feat_2_sub">Любой регион</span>
+                        </div>
+                    </div>
+                    <div class="feat-item">
+                        <div class="feat-icon"><i class="fas fa-industry"></i></div>
+                        <div class="feat-text">
+                            <strong data-key="feat_3_title">Любой объект</strong>
+                            <span data-key="feat_3_sub">Ком. и промышленные</span>
+                        </div>
+                    </div>
+                    <div class="feat-item">
+                        <div class="feat-icon"><i class="fas fa-headset"></i></div>
+                        <div class="feat-text">
+                            <strong data-key="feat_4_title">Поддержка</strong>
+                            <span data-key="feat_4_sub">После сдачи объекта</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="about-visual reveal">
+                <div class="about-card-main">
+                    <div class="about-logo-large">5A</div>
+                    <div class="about-logo-sub">ENGINEERING</div>
+                    <div class="about-card-divider"></div>
+                    <div class="about-card-info">
+                        <div class="info-block">
+                            <div class="label" data-key="info_city">Город</div>
+                            <div class="value" data-key="info_city_val">Астана</div>
+                        </div>
+                        <div class="info-block">
+                            <div class="label" data-key="info_spec">Специализация</div>
+                            <div class="value">ВОЛС</div>
+                        </div>
+                        <div class="info-block">
+                            <div class="label" data-key="info_geo">География</div>
+                            <div class="value green" data-key="info_geo_val">РК</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <!-- SERVICES -->
+    <section id="services">
+        <div class="section-header reveal">
+            <div class="section-label" data-key="services_label">Что мы делаем</div>
+            <h2 data-key="services_heading">Наши услуги</h2>
+            <p data-key="services_sub">Полный спектр работ по строительству и обслуживанию ВОЛС</p>
+        </div>
+        <div class="services-grid">
+            <div class="service-card reveal">
+                <div class="service-num">01</div>
+                <div class="service-icon"><i class="fas fa-drafting-compass"></i></div>
+                <h3 data-key="service_1_title">Проектирование</h3>
+                <p data-key="service_1_desc">Планирование и проектирование ВОЛС любой сложности для коммерческих, промышленных и инфраструктурных объектов.</p>
+            </div>
+            <div class="service-card reveal">
+                <div class="service-num">02</div>
+                <div class="service-icon"><i class="fas fa-route"></i></div>
+                <h3 data-key="service_2_title">Прокладка кабеля</h3>
+                <p data-key="service_2_desc">Прокладка оптоволоконных линий связи по всему Казахстану с соблюдением всех технических норм и регламентов.</p>
+            </div>
+            <div class="service-card reveal">
+                <div class="service-num">03</div>
+                <div class="service-icon"><i class="fas fa-tools"></i></div>
+                <h3 data-key="service_3_title">Монтаж и сварка</h3>
+                <p data-key="service_3_desc">Монтаж, сварка и профессиональные измерения оптического кабеля с применением современного оборудования.</p>
+            </div>
+            <div class="service-card reveal">
+                <div class="service-num">04</div>
+                <div class="service-icon"><i class="fas fa-network-wired"></i></div>
+                <h3 data-key="service_4_title">Пуско-наладка</h3>
+                <p data-key="service_4_desc">Тестирование сетей, пуско-наладочные работы и ввод объектов связи в эксплуатацию с передачей документации.</p>
+            </div>
+            <div class="service-card reveal">
+                <div class="service-num">05</div>
+                <div class="service-icon"><i class="fas fa-shield-alt"></i></div>
+                <h3 data-key="service_5_title">Техподдержка</h3>
+                <p data-key="service_5_desc">Техническое сопровождение и поддержка реализованных объектов, оперативное реагирование на инциденты.</p>
+            </div>
+            <div class="service-card reveal">
+                <div class="service-num">06</div>
+                <div class="service-icon"><i class="fas fa-file-alt"></i></div>
+                <h3 data-key="service_6_title">Сдача объектов</h3>
+                <p data-key="service_6_desc">Полное сопровождение процедуры сдачи объекта заказчику, включая подготовку исполнительной документации.</p>
+            </div>
+        </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <!-- GALLERY -->
+    <section id="gallery">
+        <div class="section-header reveal">
+            <div class="section-label" data-key="gallery_label">Наши проекты</div>
+            <h2 data-key="gallery_heading">В работе</h2>
+            <p data-key="gallery_sub">Реальные объекты — реальные результаты</p>
+        </div>
+        <div class="gallery-grid">
+            <div class="gallery-item gallery-item--wide reveal">
+                <img src="photo_cable_machine.jpg" alt="Кабелеукладчик на объекте" loading="lazy">
+                <div class="gallery-overlay">
+                    <div class="gallery-tag" data-key="gallery_tag2">Прокладка ВОЛС</div>
+                    <div class="gallery-caption" data-key="gallery_cap2">Кабелеукладчик на объекте</div>
+                </div>
+            </div>
+            <div class="gallery-item reveal">
+                <img src="photo_splicing.jpg" alt="Сварочное оборудование Sumitomo" loading="lazy">
+                <div class="gallery-overlay">
+                    <div class="gallery-tag" data-key="gallery_tag3">Монтаж и сварка</div>
+                    <div class="gallery-caption" data-key="gallery_cap3">Оборудование Sumitomo Electric</div>
+                </div>
+            </div>
+            <div class="gallery-item reveal">
+                <img src="photo_bulldozer.jpg" alt="Прокладка кабеля бульдозером" loading="lazy">
+                <div class="gallery-overlay">
+                    <div class="gallery-tag" data-key="gallery_tag1">Полевые работы</div>
+                    <div class="gallery-caption" data-key="gallery_cap1">Прокладка в открытом грунте</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <!-- VACANCIES -->
+    <section id="vacancies">
+        <div class="section-header reveal">
+            <div class="section-label" data-key="vac_label">Карьера</div>
+            <h2 data-key="vac_heading">Вакансии</h2>
+            <p data-key="vac_sub">Присоединяйтесь к нашей команде профессионалов</p>
+        </div>
+        <div class="vacancies-list">
+            <div class="vacancy-item reveal">
+                <div class="vacancy-left">
+                    <div class="vacancy-icon"><i class="fas fa-hard-hat"></i></div>
+                    <div>
+                        <div class="vacancy-title" data-key="vac_1">Инженер ПТО</div>
+                        <div class="vacancy-dept" data-key="vac_dept">Производственно-технический отдел</div>
+                    </div>
+                </div>
+                <div class="vacancy-right">
+                    <div class="vacancy-badge" data-key="vac_status">Актуально</div>
+                    <i class="fas fa-chevron-right vacancy-arrow"></i>
+                </div>
+            </div>
+            <div class="vacancy-item reveal">
+                <div class="vacancy-left">
+                    <div class="vacancy-icon"><i class="fas fa-pencil-ruler"></i></div>
+                    <div>
+                        <div class="vacancy-title" data-key="vac_2">Инженер-проектировщик</div>
+                        <div class="vacancy-dept" data-key="vac_dept2">Отдел проектирования</div>
+                    </div>
+                </div>
+                <div class="vacancy-right">
+                    <div class="vacancy-badge" data-key="vac_status">Актуально</div>
+                    <i class="fas fa-chevron-right vacancy-arrow"></i>
+                </div>
+            </div>
+            <div class="vacancy-item reveal">
+                <div class="vacancy-left">
+                    <div class="vacancy-icon"><i class="fas fa-calculator"></i></div>
+                    <div>
+                        <div class="vacancy-title" data-key="vac_3">Инженер-сметчик</div>
+                        <div class="vacancy-dept" data-key="vac_dept3">Сметный отдел</div>
+                    </div>
+                </div>
+                <div class="vacancy-right">
+                    <div class="vacancy-badge" data-key="vac_status">Актуально</div>
+                    <i class="fas fa-chevron-right vacancy-arrow"></i>
+                </div>
+            </div>
+            <div class="vacancy-item reveal">
+                <div class="vacancy-left">
+                    <div class="vacancy-icon"><i class="fas fa-map-marked-alt"></i></div>
+                    <div>
+                        <div class="vacancy-title" data-key="vac_4">Инженер-геодезист камеральщик</div>
+                        <div class="vacancy-dept" data-key="vac_dept4">Геодезический отдел</div>
+                    </div>
+                </div>
+                <div class="vacancy-right">
+                    <div class="vacancy-badge" data-key="vac_status">Актуально</div>
+                    <i class="fas fa-chevron-right vacancy-arrow"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <!-- FOOTER / CONTACTS -->
+    <footer id="contacts">
+        <div class="footer-top reveal">
+            <div class="footer-brand">
+                <div class="logo-wrap">
+                    <div class="logo-name">5A Engineering</div>
+                </div>
+                <p data-key="footer_desc">Строительство и развитие волоконно-оптических линий связи по всему Казахстану. Надёжные сети. Современные технологии.</p>
+            </div>
+
+            <div class="footer-col">
+                <h4 data-key="nav_services">Услуги</h4>
+                <ul>
+                    <li><i class="fas fa-circle" style="font-size:4px;margin-top:6px"></i> <span data-key="service_1_title">Проектирование</span></li>
+                    <li><i class="fas fa-circle" style="font-size:4px;margin-top:6px"></i> <span data-key="service_2_title">Прокладка кабеля</span></li>
+                    <li><i class="fas fa-circle" style="font-size:4px;margin-top:6px"></i> <span data-key="service_3_title">Монтаж и сварка</span></li>
+                    <li><i class="fas fa-circle" style="font-size:4px;margin-top:6px"></i> <span data-key="service_4_title">Пуско-наладка</span></li>
+                    <li><i class="fas fa-circle" style="font-size:4px;margin-top:6px"></i> <span data-key="service_5_title">Техподдержка</span></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4 data-key="nav_vacancies">Вакансии</h4>
+                <ul>
+                    <li><i class="fas fa-circle" style="font-size:4px;margin-top:6px"></i> <span data-key="vac_1">Инженер ПТО</span></li>
+                    <li><i class="fas fa-circle" style="font-size:4px;margin-top:6px"></i> <span data-key="vac_2">Инженер-проектировщик</span></li>
+                    <li><i class="fas fa-circle" style="font-size:4px;margin-top:6px"></i> <span data-key="vac_3">Инженер-сметчик</span></li>
+                    <li><i class="fas fa-circle" style="font-size:4px;margin-top:6px"></i> <span data-key="vac_4">Инженер-геодезист</span></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4 data-key="nav_contacts">Контакты</h4>
+                <ul>
+                    <li>
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span data-key="cont_addr_val">г. Астана, р-н Есиль, ул. Керей Жәнібек Хандар, 12А</span>
+                    </li>
+                    <li>
+                        <i class="fas fa-envelope"></i>
+                        <a href="mailto:eng5a.team@gmail.com">eng5a.team@gmail.com</a>
+                    </li>
+                    <li>
+                        <i class="fas fa-phone"></i>
+                        <a href="tel:+77056337352">+7 705 633 7352</a>
+                    </li>
+                    <li>
+                        <i class="fas fa-clock"></i>
+                        <span data-key="cont_work_val">9:00 – 18:00, Пн – Пт</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p data-key="footer_copy">© 2026 ТОО «5A Engineering». Национальный масштаб.</p>
+            <p>Казахстан · ВОЛС · Астана</p>
+        </div>
+    </footer>
+
+    <!-- LIGHTBOX -->
+    <div class="lightbox" id="lightbox" onclick="closeLightbox()">
+        <button class="lightbox-close" onclick="closeLightbox()"><i class="fas fa-times"></i></button>
+        <img class="lightbox-img" id="lightboxImg" src="" alt="">
+    </div>
+
+</body>
+</html>
